@@ -1,17 +1,21 @@
 {
-  "name": "vuepress-theme-reco-demo",
-  "version": "2.0.0",
-  "description": "Demo for vuepress-theme-reco@2.x.",
-  "repository": "git@github.com:recoluan/vuepress-theme-reco-demo.git",
-  "author": "reco_luan <recoluan@outlook.com>",
-  "license": "MIT",
+  "name": "jay-blog",
+  "version": "1.0.0",
+  "description": "jayjay's blog",
+  "main": "index.js",
+  "author": "jayjay",
   "scripts": {
     "dev": "vuepress dev .",
     "start": "vuepress dev .",
-    "build": "vuepress build ."
+    "build": "vuepress build .",
+    "public:github": "bash deploy.sh",
+    "public:gitee": "bash deploy-gitee.sh"
   },
+  "license": "MIT",
   "dependencies": {
-    "vuepress": "2.0.0-beta.46",
-    "vuepress-theme-reco": "2.0.0-beta.16"
+    "@vuepress-reco/vuepress-plugin-kan-ban-niang": "^1.0.5",
+    "vuepress": "^1.9.7",
+    "vuepress-plugin-helper-live2d": "^1.0.2",
+    "vuepress-theme-reco": "^1.6.13"
   }
 }
