@@ -1,6 +1,10 @@
 module.exports ={
   title: 'jayjay\'s blog',
   description: 'good good study, day day up',
+  base:'/',
+  markdown: {
+    lineNumbers: true // 代码块显示行号
+  },
   theme:'reco',
   themeConfig: {
 	type: 'blog',
