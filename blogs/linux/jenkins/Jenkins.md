@@ -71,6 +71,14 @@ sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 yum install -y fontconfig java-11-openjdk
 ```
 
+or
+
+```shell
+yum install -y java-1.8.0-openjdk*
+```
+
+
+
 3.安装jenkins
 
 ```shell
@@ -120,7 +128,15 @@ firewall-cmd --reload
 
 高版本的Jenkins的配置文件不再是`/etc/sysconfig/jenkins`了，虽然他还存在，不过并无暖用
 
-而是`/usr/lib/systemd/system/jenkins.service`
+而是`/usr/lib/systemd/system/jenkins.service`里面的
+
+```shell
+User=root
+Group=root
+Environment="JENKINS_PORT=8888"
+```
+
+
 
 修改配置后需要
 
@@ -133,7 +149,7 @@ systemctl daemon-reload
 再重启
 
 ```shell
-service jenkins restart
+systemctl restart jenkins 
 ```
 
 
@@ -165,6 +181,16 @@ service jenkins restart
 
 
 ![image-20220526182605944](Jenkins.assets/image-20220526182605944.png)
+
+### 卸载
+
+# 卸载yum安装的jenkins：
+
+```shell
+rpm -e jenkins #rpm卸载
+rpm -ql jenkins #检查是否卸载成功
+find / -iname jenkins | xargs -n 1000 rm -rf #彻底删除残留文件
+```
 
 
 
@@ -585,36 +611,25 @@ mvn clean package
 
 ![image-20220609161717764](Jenkins.assets/image-20220609161717764.png)
 
+附上一个示例脚本
 
+```shell
+echo "kill进程"
+pid=`ps -ef | grep $APP_NAME | grep -v grep |awk '{print $2}'`
+if [ $pid ]; then
+    echo :App  is  running pid=$pid
+    kill -9 $pid
+fi
+target=/home/java
+echo  "当前路径:"$(pwd)
+echo '开始打包'
+mvn clean package -Dmaven.test.skip=true
+echo '打包完成'
+echo '复制文件'
+cd target
+cp -rf test-service-0.0.1-SNAPSHOT.jar $target
+echo '启动jar'
+nohup java -Xms128m -Xmx256m -jar test-service-0.0.1-SNAPSHOT.jar> log.log 2>&1 &
+ tail -f log.log
+```
 
-
-
-## Jenkins构建Maven项目
-
-### Jenkins构建的项目类型介绍
-
-Jenkins中自动构建项目的类型有很多，常用的有以下三种： 
-
-**自由风格软件项目（FreeStyle Project）** 
-
-**Maven项目（Maven Project）** 
-
-**流水线项目（Pipeline Project）** 
-
-每种类型的构建其实都可以完成一样的构建过程与结果，只是在操作方式、灵活度等方面有所区别，在 实际开发中可以根据自己的需求和习惯来选择。（PS：个人推荐使用流水线类型，因为灵活度非常高）
-
-
-
-### **自由风格项目构建**
-
-> 拉取代码->编译->打包->部署
-
-
-
-
-
-
-
-
-
-# sd
