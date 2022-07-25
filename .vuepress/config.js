@@ -54,8 +54,7 @@ module.exports ={
 			  path: '/',
 			  collapsable: false, // 不折叠
 			  children: [
-				  {title:'centos7安装ftp',path:'jenkins'}, 
-				  {title:'GitLab代码托管服务器安装', path:'/blogs/linux/GitLab-install'}
+				  {title:'centos7安装jenkins并部署spring boot项目',path:'jenkins'}
 			  ]
 			}
 		],
@@ -74,7 +73,8 @@ module.exports ={
 			  items: [
 				  { text: 'docker', link: '/blogs/linux/docker/docker-install' },
 				  { text: 'ftp', link: '/blogs/linux/ftp/ftp-install' },
-				  { text: 'jenkins', link: '/blogs/linux/jenkins/jenkins' }
+				  { text: 'jenkins', link: '/blogs/linux/jenkins/jenkins' },
+				  { text: 'GitLab', link: '/blogs/linux/GitLab-install' }
 				]
 		  }
         ]

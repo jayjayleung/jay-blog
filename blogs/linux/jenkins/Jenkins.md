@@ -1,5 +1,5 @@
 ---
-title: Centos安装Jenkins
+title: centos7安装jenkins并部署spring boot项目
 date: 2022-05-19
 tags: 
  - jenkins
@@ -610,6 +610,10 @@ mvn clean package
 再次构建，如果可以把项目打包成功，代表maven环境配置成功啦！
 
 ![image-20220609161717764](Jenkins.assets/image-20220609161717764.png)
+
+## 部署项目
+
+配置好后就可以在shell脚本那里写上项目部署的脚本了，实际情况根据项目情况写，大体的步骤就是，kill掉原来进程 -> 打包 -> 复制到对应目录 -> 启动
 
 附上一个示例脚本
 
