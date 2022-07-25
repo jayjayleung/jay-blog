@@ -156,7 +156,14 @@ module.exports ={
 				opacity: 0.8 // 模型透明度(default: 0.8)
 			  }
 			}
-		  }]
+		  }],
+		  /*
+		  ["vuepress-plugin-nuggets-style-copy", {
+			  copyText: "复制代码",
+			  tip: {
+				  content: "复制成功"
+			  }
+		  }]*/
   ],
   // debug: true,
 }
