@@ -2,6 +2,11 @@ module.exports ={
   title: 'jayjay\'s blog',
   description: 'good good study, day day up',
   base:'/',
+  locales: {
+    '/': {
+      lang: 'zh-CN'
+    }
+  },
   markdown: {
     lineNumbers: true // 代码块显示行号
   },
@@ -157,12 +162,19 @@ module.exports ={
 			  }
 			}
 		  }],
-		  /*
 		  ["vuepress-plugin-nuggets-style-copy", {
-			  copyText: "复制代码",
+			  selector: ['div[class*="language-"] pre'],
+			  copyText: "复制代码",  //vuepress复制粘贴提示插件P 先安装在配置 npm install vuepress-plugin-nuggets-style-copy --save
 			  tip: {
-				  content: "复制成功"
+				content: "复制成功!"
 			  }
+		  }],
+		  /*
+		  ['one-click-copy', {
+			copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
+			copyMessage: 'Copied successfully!', // default is 'Copied successfully!'
+			toolTipMessage: 'Copy to clipboard', // default is ''Copy to clipboard'
+			duration: 300, // prompt message display time
 		  }]*/
   ],
   // debug: true,

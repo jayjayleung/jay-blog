@@ -5,6 +5,7 @@
   "main": "index.js",
   "author": "jayjay",
   "scripts": {
+	"postinstall": "patch-package",
     "dev": "vuepress dev .",
     "start": "vuepress dev .",
     "build": "vuepress build .",
@@ -16,9 +17,10 @@
     "@vuepress-reco/vuepress-plugin-kan-ban-niang": "^1.0.5",
     "vuepress": "^1.9.7",
     "vuepress-plugin-helper-live2d": "^1.0.2",
+    "vuepress-plugin-nuggets-style-copy": "^1.0.3",
     "vuepress-theme-reco": "^1.6.14"
   },
   "devDependencies": {
-    "vuepress-plugin-nuggets-style-copy": "^1.0.3"
+	"patch-package": "^6.4.7"
   }
 }

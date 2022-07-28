@@ -12,11 +12,7 @@ contact: linux/docker
 
 ```shell
 docker pull nginx:latest
-
-拉取完成查看：docker images
 ```
-
-
 
 # 创建挂载目录
 
@@ -84,22 +80,21 @@ server {
 
 ```shell
 #启动一个容器
- docker run -d --name nginx nginx
+docker run -d --name nginx nginx
 # 查看 容器 获取容器ID 或直接使用名字
- docker container ls
-# 在当前目录下创建目录：conf 
- mkdir conf
-# 拷贝容器内 Nginx 默认配置文件到本地当前目录下的 conf 目录（$PWD 当前全路径）
+docker container ls
+# 拷贝容器内 Nginx 默认配置文件到本地当前(nginx)目录下的 conf 目录（$PWD 当前全路径）
 docker cp nginx:/etc/nginx/nginx.conf $PWD/conf
 docker cp nginx:/etc/nginx/conf.d $PWD/conf
 
 # 停止容器
- docker container stop nginx
+docker container stop nginx
+ #or
+docker stop nginx
 # 删除容器
- docker container rm nginx
-
-# 在当前目录下创建目录：html 放静态文件
- mkdir html
+docker container rm nginx
+ #or
+docker rm nginx
 ```
 
 
@@ -107,13 +102,13 @@ docker cp nginx:/etc/nginx/conf.d $PWD/conf
 # 启动容器
 
 ```shell
-docker run --privileged=true -d -p 80:80 -p 443:443 --name nginx  -v /home/nginx/html:/usr/share/nginx/html  -v /home/nginx/conf.d:/etc/nginx/conf.d -v /home/nginx/logs:/var/log/nginx  nginx  
+docker run --restart=always  --privileged=true -d -p 80:80 -p 443:443 --name nginx  -v /home/nginx/html:/usr/share/nginx/html  -v /home/nginx/conf.d:/etc/nginx/conf.d -v /home/nginx/logs:/var/log/nginx  nginx  
 ```
 
-下面这个命令用不了，挂载`ngxinx.conf`文件失败，找了很多方法都解决不了，只能用上面的命令启动
+如果挂载`ngxinx.conf`文件用下面的命令启动，注意，要保证你挂载的目录下有`nginx.conf`文件，否则会报错
 
 ```shell
-docker run --privileged=true -d -p 80:80 -p 443:443 --name nginx -v /home/nginx/nginx.conf:/etc/nginx/nginx.conf -v /home/nginx/html:/usr/share/nginx/html  -v /home/nginx/conf.d:/etc/nginx/conf.d -v /home/nginx/logs:/var/log/nginx  nginx  
+docker run --restart=always  --privileged=true -d -p 80:80 -p 443:443 --name nginx -v /home/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v /home/nginx/html:/usr/share/nginx/html  -v /home/nginx/conf.d:/etc/nginx/conf.d -v /home/nginx/logs:/var/log/nginx  nginx 
 ```
 
 
