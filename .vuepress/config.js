@@ -169,6 +169,9 @@ module.exports ={
 				content: "复制成功!"
 			  }
 		  }],
+		  ['@vuepress-reco/back-to-top',false],
+		   // 悬挂小猫返回顶部
+		  ['go-top'],
 		  /*
 		  ['one-click-copy', {
 			copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
