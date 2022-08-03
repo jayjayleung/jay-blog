@@ -8,13 +8,13 @@ categories:
 contact: linux/docker
 ---
 
-# 一、找到一个合适的docker的redis的版本
+## 一、找到一个合适的docker的redis的版本
 
 可以去[docker hub](https://hub.docker.com/_/redis?tab=tags)中去找一下
 
 
 
-# 二、使用docker安装redis
+## 二、使用docker安装redis
 
 ```shell
 sudo docker pull redis
@@ -26,7 +26,7 @@ sudo docker pull redis
 sudo docker images
 ```
 
-# 三、准备redis的配置文件
+## 三、准备redis的配置文件
 
 因为需要redis的配置文件`redis.conf`，这里最好还是去redis的[官方下载][http://download.redis.io/redis-stable/redis.conf]一个redis使用里面的配置文件即可
 
@@ -38,7 +38,7 @@ wget https://raw.githubusercontent.com/antirez/redis/4.0/redis.conf -O conf/redi
 
 
 
-# 四、配置redis.conf配置文件
+## 四、配置redis.conf配置文件
 
 **修改`redis.conf`配置文件：**
 
@@ -52,7 +52,7 @@ appendonly yes#redis持久化　　默认是no
 tcp-keepalive 300 #防止出现远程主机强迫关闭了一个现有的连接的错误 默认是300
 ```
 
-# 五、创建本地与docker映射的目录，即本地存放的位置
+## 五、创建本地与docker映射的目录，即本地存放的位置
 
 创建本地存放redis的位置：
 
@@ -65,7 +65,7 @@ mkdir /home/redis/data
 
 把`配置文件`拷贝到刚才创建好的`/home/redis`里
 
-# 六、启动docker redis
+## 六、启动docker redis
 
 ```shell
 docker run -p 6379:6379 --name redis -v /home/redis/redis.conf:/etc/redis/redis.conf  -v /home/redis/data:/data -d redis redis-server /etc/redis/redis.conf --appendonly yes
@@ -81,7 +81,7 @@ redis-server /etc/redis/redis.conf：这个是关键配置，让redis不是无�
 –appendonly yes：redis启动后数据持久化
 ```
 
-# 七、查看是否启动成功
+## 七、查看是否启动成功
 
 是否成功启动：如果有redis就代表成功了
 

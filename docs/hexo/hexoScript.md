@@ -10,7 +10,7 @@ categories:
 
 
 
-# [Hexo常用命令](https://www.cnblogs.com/lzf1996/p/5220585.html)
+## [Hexo常用命令](https://www.cnblogs.com/lzf1996/p/5220585.html)
 
 ## hexo
 

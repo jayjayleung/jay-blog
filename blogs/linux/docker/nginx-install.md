@@ -8,13 +8,13 @@ categories:
 contact: linux/docker
 ---
 
-# 在Docker下载Nginx镜像
+## 在Docker下载Nginx镜像
 
 ```shell
 docker pull nginx:latest
 ```
 
-# 创建挂载目录
+## 创建挂载目录
 
 先在主机创建工作文件夹，为了挂载配置和静态文件的访问使用
 
@@ -24,7 +24,7 @@ mkdir -p /home/nginx/{conf,conf.d,html,logs}
 
 
 
-# 编写`nginx.conf`配置文件，并放在文件夹中
+## 编写`nginx.conf`配置文件，并放在文件夹中
 
 ```lua
 server {
@@ -99,7 +99,7 @@ docker rm nginx
 
 
 
-# 启动容器
+## 启动容器
 
 ```shell
 docker run --restart=always  --privileged=true -d -p 80:80 -p 443:443 --name nginx  -v /home/nginx/html:/usr/share/nginx/html  -v /home/nginx/conf.d:/etc/nginx/conf.d -v /home/nginx/logs:/var/log/nginx  nginx  
@@ -115,7 +115,7 @@ docker run --restart=always  --privileged=true -d -p 80:80 -p 443:443 --name ngi
 
 
 
-# 查看启动的容器
+## 查看启动的容器
 
 ```shell
 docker ps 
