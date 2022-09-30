@@ -41,6 +41,17 @@ const sidebar = {
 			]
 		  }
 	  ],
+	  '/blogs/linux/other/': [
+		  {
+			title: 'other',
+			path: '/',
+			collapsable: false, // 不折叠
+			children: [
+				{title:'GitLab代码托管服务器安装',path:'GitLab-install'},
+				{title:'centos7 挂载硬盘',path:'linux-disk-install'},
+			]
+		  }
+	  ],
 	
   }
 

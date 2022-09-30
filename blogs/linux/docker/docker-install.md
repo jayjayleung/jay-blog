@@ -8,7 +8,7 @@ categories:
 contact: linux/docker
 ---
 
-# CentOS Docker 安装
+## CentOS Docker 安装
 
 1、Docker 要求 CentOS 系统的内核版本高于 3.10 ，查看本页面的前提条件来验证你的CentOS 版本是否支持 Docker 。
 

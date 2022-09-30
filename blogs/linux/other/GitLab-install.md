@@ -2,10 +2,10 @@
 title: GitLab代码托管服务器安装
 date: 2022-05-19
 tags: 
- - gitlab
+ - other
 categories: 
  - linux
-contact: linux/gitlab
+contact: linux/other
 ---
 
 
