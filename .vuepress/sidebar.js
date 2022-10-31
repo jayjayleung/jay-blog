@@ -1,3 +1,16 @@
+const { createSideBarConfig,createSideBarConfig2Children } = require('./utils')
+
+
+const BLOGS = '/blogs'
+const DOCS = '/docs'
+//go
+const GO_PATH='/go/'
+
+const BLOGS_GO_PATH=BLOGS+GO_PATH
+
+console.log(createSideBarConfig2Children(GO_PATH,BLOGS))
+// console.log(createSideBarConfig("GO学习笔记",GO_PATH,BLOGS))
+
 const sidebar = {
 	'/docs/hexo/': [
 	  {
@@ -52,8 +65,22 @@ const sidebar = {
 			]
 		  }
 	  ],
+	  '/blogs/go/': [
+		  {
+			title: 'Go学习',
+			path: '/',
+			collapsable: false, // 不折叠
+			// children: createSideBarConfig2Children(GO_PATH,BLOGS)
+			children: [
+				{title:'Go环境安装',path:'Go环境安装'},
+				{title:'第一个Go程序 Hello Word',path:'第一个Go程序 Hello Word'},
+				{title:'Go语言的基础语法规范',path:'Go语言的基础语法规范'},
+			]
+		  }
+	  ],
 	
   }
+
 
   
 module.exports = {

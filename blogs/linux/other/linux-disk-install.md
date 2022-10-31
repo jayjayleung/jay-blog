@@ -10,8 +10,6 @@ contact: linux/other
 
 
 
-# centos7 挂载硬盘
-
 1、查看当前未挂载的硬盘
 
 ```shell

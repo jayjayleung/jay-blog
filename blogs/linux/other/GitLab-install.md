@@ -10,8 +10,6 @@ contact: linux/other
 
 
 
-# GitLab代码托管服务器安装
-
 ## GitLab简介
 
 ![img](GitLab-install.assets/u=4274436156,187332505&fm=253&fmt=auto&app=138&f=PNG.png)
