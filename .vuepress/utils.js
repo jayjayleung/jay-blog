@@ -13,7 +13,7 @@ const getFile2DelPre = (preIndex,prefixPath, rootPath = defaultRootPath) => {
     .filter(item => item.lastIndexOf('.md') != -1)
     .map(item => {
       const title = `${item.substring(2).replace('.md', '')}`;
-      const path = title;
+      const path =`${item.replace('.md', '')}`;
       return { title :title, path : path};
     })
 }
@@ -30,10 +30,11 @@ const createSideBarConfig = (title, prefixPath, rootpath = defaultRootPath,colla
 const createSideBarConfig2Children = (prefixPath,rootpath = defaultRootPath) => {
   return getFile(prefixPath,rootpath)
 }
-const delPrefixSiderBarConfig2Children = (prefixPath,rootpath = defaultRootPath) => {
-  return getFile(prefixPath,rootpath)
+const delPrefixSiderBarConfig2Children = (preIndex,prefixPath,rootpath = defaultRootPath) => {
+  return getFile2DelPre(preIndex,prefixPath,rootpath)
 }
 module.exports = {
   createSideBarConfig,
-  createSideBarConfig2Children
+  createSideBarConfig2Children,
+  delPrefixSiderBarConfig2Children
 }

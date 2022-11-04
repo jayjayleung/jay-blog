@@ -1,4 +1,4 @@
-const { createSideBarConfig,createSideBarConfig2Children } = require('./utils')
+const { createSideBarConfig,createSideBarConfig2Children,delPrefixSiderBarConfig2Children } = require('./utils')
 
 
 const BLOGS = '/blogs'
@@ -70,7 +70,7 @@ const sidebar = {
 			title: 'Go学习',
 			path: '/',
 			collapsable: false, // 不折叠
-			children: createSideBarConfig2Children(GO_PATH,BLOGS)
+			children: delPrefixSiderBarConfig2Children(2,GO_PATH,BLOGS)
 			// children: [
 			// 	{title:'Go环境安装',path:'Go-install'},
 			// 	{title:'第一个Go程序 Hello Word',path:'HelloWord'},
@@ -78,6 +78,15 @@ const sidebar = {
 			// ]
 		  }
 	  ],
+	  
+	  '/docs/other/': [
+		{
+		  title: 'other',
+		  path: '/',
+		  collapsable: false, // 不折叠
+		  children: createSideBarConfig2Children('/other/',DOCS)
+		}
+	],
 	
   }
 
