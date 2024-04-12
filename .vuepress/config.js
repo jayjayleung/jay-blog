@@ -2,7 +2,7 @@ const { sidebar } = require('./sidebar')
 const { plugins } = require('./plugins')
 const { nav } = require('./nav')
 module.exports = {
-	title: '学习每一天',
+	title: 'jayjay\'s blog',
 	description: 'good good study, day day up',
 	base: '/',
 	locales: {

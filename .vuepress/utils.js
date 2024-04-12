@@ -11,8 +11,12 @@ const getFile = (prefixPath, rootPath = defaultRootPath) => {
 const getFile2DelPre = (preIndex,prefixPath, rootPath = defaultRootPath) => {
   return fs.readdirSync(path.join(process.cwd(), `${rootPath}${prefixPath}`))
     .filter(item => item.lastIndexOf('.md') != -1)
+    .sort((a, b) => parseInt(a.replace(/[^0-9]/, '')) - parseInt(b.replace(/[^0-9]/, '')))
     .map(item => {
-      const title = `${item.substring(2).replace('.md', '')}`;
+      // console.log(item);
+      // const title = `${item.substring(2).replace('.md', '')}`;
+      const title = `${item.replace(/[0-9]+\./,'').replace('.md', '')}`;
+      // const title = `${item.replace('.md', '')}`;
       const path =`${item.replace('.md', '')}`;
       return { title :title, path : path};
     })
