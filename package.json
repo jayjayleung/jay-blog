@@ -10,7 +10,8 @@
     "start": "vuepress dev .",
     "build": "vuepress build .",
     "public:github": "bash deploy.sh",
-    "public:gitee": "bash deploy-gitee.sh"
+    "public:gitee": "bash deploy-gitee.sh",
+    "public:githubhome": "bash deploy-githubhome.sh"
   },
   "license": "MIT",
   "dependencies": {
