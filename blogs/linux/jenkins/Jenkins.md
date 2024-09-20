@@ -168,11 +168,11 @@ systemctl restart jenkins
 
 因为Jenkins插件需要连接默认官网下载，速度非常慢，而且经过会失败，所以我们暂时先跳过插件安装
 
-![image-20220526182106100](Jenkins.assets/image-20220526182106100.png)
+![image-20220526182106100](./Jenkins.assets/image-20220526182106100.png)
 
 
 
-![image-20220526182138074](Jenkins.assets/image-20220526182138074.png)
+![image-20220526182138074](./Jenkins.assets/image-20220526182138074.png)
 
 
 
@@ -180,7 +180,7 @@ systemctl restart jenkins
 
 
 
-![image-20220526182605944](Jenkins.assets/image-20220526182605944.png)
+![image-20220526182605944](./Jenkins.assets/image-20220526182605944.png)
 
 ### 卸载
 
@@ -218,7 +218,7 @@ sed -i 's/http:\/\/updates.jenkins-ci.org\/download/https:\/\/mirrors.tuna.tsing
 
 > https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json
 
-![image-20220527142220413](Jenkins.assets/image-20220527142220413.png)
+![image-20220527142220413](./Jenkins.assets/image-20220527142220413.png)
 
 `Sumbit`后，在浏览器输入： `http://你的ip:端口/restart`，重启Jenkins。
 
@@ -228,11 +228,11 @@ sed -i 's/http:\/\/updates.jenkins-ci.org\/download/https:\/\/mirrors.tuna.tsing
 
 `Jenkins`->`Manage Jenkins`->`Manage Plugins`，点击`Available`，搜索"Chinese"
 
-![image-20220527144017691](Jenkins.assets/image-20220527144017691.png)
+![image-20220527144017691](./Jenkins.assets/image-20220527144017691.png)
 
 重启Jenkins后，就看到Jenkins汉化了！（PS：但可能部分菜单汉化会失败）
 
-![image-20220527152225632](Jenkins.assets/image-20220527152225632.png)
+![image-20220527152225632](./Jenkins.assets/image-20220527152225632.png)
 
 
 
@@ -242,19 +242,19 @@ sed -i 's/http:\/\/updates.jenkins-ci.org\/download/https:\/\/mirrors.tuna.tsing
 
 **安装**`Role-based Authorization Strategy`**插件**
 
-![image-20220527152344352](Jenkins.assets/image-20220527152344352.png)
+![image-20220527152344352](./Jenkins.assets/image-20220527152344352.png)
 
 
 
 **开启权限全局安全配置**
 
-![image-20220527152938120](Jenkins.assets/image-20220527152938120.png)
+![image-20220527152938120](./Jenkins.assets/image-20220527152938120.png)
 
 授权策略切换为"Role-Based Strategy"，保存
 
 
 
-![image-20220527153226903](Jenkins.assets/image-20220527153226903.png)
+![image-20220527153226903](./Jenkins.assets/image-20220527153226903.png)
 
 
 
@@ -264,13 +264,13 @@ sed -i 's/http:\/\/updates.jenkins-ci.org\/download/https:\/\/mirrors.tuna.tsing
 
 点击"Manage Roles
 
-![image-20220527153837779](Jenkins.assets/image-20220527153837779.png)
+![image-20220527153837779](./Jenkins.assets/image-20220527153837779.png)
 
-![image-20220527153910108](Jenkins.assets/image-20220527153910108.png)
+![image-20220527153910108](./Jenkins.assets/image-20220527153910108.png)
 
 
 
-![image-20220527153945055](Jenkins.assets/image-20220527153945055.png)
+![image-20220527153945055](./Jenkins.assets/image-20220527153945055.png)
 
 
 
@@ -290,29 +290,29 @@ sed -i 's/http:\/\/updates.jenkins-ci.org\/download/https:\/\/mirrors.tuna.tsing
 
 
 
-![image-20220527155036046](Jenkins.assets/image-20220527155036046.png)
+![image-20220527155036046](./Jenkins.assets/image-20220527155036046.png)
 
 
 
-![image-20220527155049152](Jenkins.assets/image-20220527155049152.png)
+![image-20220527155049152](./Jenkins.assets/image-20220527155049152.png)
 
 ### 创建用户
 
 在系统管理页面进入 `Manage Users(管理用户)`
 
-![image-20220527161627989](Jenkins.assets/image-20220527161627989.png)
+![image-20220527161627989](./Jenkins.assets/image-20220527161627989.png)
 
 
 
-![image-20220527161716590](Jenkins.assets/image-20220527161716590.png)
+![image-20220527161716590](./Jenkins.assets/image-20220527161716590.png)
 
-![image-20220527161752126](Jenkins.assets/image-20220527161752126.png)
+![image-20220527161752126](./Jenkins.assets/image-20220527161752126.png)
 
 
 
 分别创建两个用户：`tring`和`cloudx`
 
-![image-20220527162140683](Jenkins.assets/image-20220527162140683.png)
+![image-20220527162140683](./Jenkins.assets/image-20220527162140683.png)
 
 
 
@@ -325,7 +325,7 @@ sed -i 's/http:\/\/updates.jenkins-ci.org\/download/https:\/\/mirrors.tuna.tsing
 
 
 
-![image-20220527162733839](Jenkins.assets/image-20220527162733839.png)
+![image-20220527162733839](./Jenkins.assets/image-20220527162733839.png)
 
 
 
@@ -333,7 +333,7 @@ sed -i 's/http:\/\/updates.jenkins-ci.org\/download/https:\/\/mirrors.tuna.tsing
 
 以管理员账户创建两个项目，分别为`jtest01`和`jweb01`
 
-![image-20220527163249564](Jenkins.assets/image-20220527163249564.png)
+![image-20220527163249564](./Jenkins.assets/image-20220527163249564.png)
 
 结果为： 
 
@@ -352,15 +352,15 @@ sed -i 's/http:\/\/updates.jenkins-ci.org\/download/https:\/\/mirrors.tuna.tsing
 
 
 
-![image-20220527164341064](Jenkins.assets/image-20220527164341064.png)
+![image-20220527164341064](./Jenkins.assets/image-20220527164341064.png)
 
 安装插件后，管理界面出现了"凭证(Manage Credentials)"菜单，在这里管理所有凭证
 
-![image-20220527175650906](Jenkins.assets/image-20220527175650906.png)
+![image-20220527175650906](./Jenkins.assets/image-20220527175650906.png)
 
 可以添加的凭证有5种：
 
-![image-20220527181006242](Jenkins.assets/image-20220527181006242.png)
+![image-20220527181006242](./Jenkins.assets/image-20220527181006242.png)
 
 
 
@@ -412,7 +412,7 @@ git --version
 
 
 
-![image-20220527183617005](Jenkins.assets/image-20220527183617005.png)
+![image-20220527183617005](./Jenkins.assets/image-20220527183617005.png)
 
 
 
@@ -420,29 +420,29 @@ git --version
 
 
 
-![image-20220527185317959](Jenkins.assets/image-20220527185317959.png)
+![image-20220527185317959](./Jenkins.assets/image-20220527185317959.png)
 
 **测试凭证是否可用** 
 
 创建一个`FreeStyle(自由风格)`项目：新建`Item`->`FreeStyle Project`->`确定`
 
-![image-20220530174342499](Jenkins.assets/image-20220530174342499.png)
+![image-20220530174342499](./Jenkins.assets/image-20220530174342499.png)
 
 找到"源码管理"->"Git"，在Repository URL复制Gitlab中的项目URL
 
-![image-20220608143444523](Jenkins.assets/image-20220608143444523.png)
+![image-20220608143444523](./Jenkins.assets/image-20220608143444523.png)
 
 
 
-![image-20220608143459479](Jenkins.assets/image-20220608143459479.png)
+![image-20220608143459479](./Jenkins.assets/image-20220608143459479.png)
 
 保存配置后，点击构建`Build Now(立即构建)` 开始构建项目
 
-![image-20220608143725344](Jenkins.assets/image-20220608143725344.png)
+![image-20220608143725344](./Jenkins.assets/image-20220608143725344.png)
 
 查看`/var/lib/jenkins/workspace/目录`，发现已经从Gitlab成功拉取了代码到Jenkins中。
 
-![image-20220608144053532](Jenkins.assets/image-20220608144053532.png)
+![image-20220608144053532](./Jenkins.assets/image-20220608144053532.png)
 
 ### SSH密钥类型
 
@@ -454,7 +454,7 @@ ssh-keygen -t rsa
 
 在/root/.ssh/目录保存了公钥和使用
 
-![image-20220609150907542](Jenkins.assets/image-20220609150907542.png)
+![image-20220609150907542](./Jenkins.assets/image-20220609150907542.png)
 
 
 
@@ -466,7 +466,7 @@ ssh-keygen -t rsa
 
 **把生成的公钥放在Gitlab中**
 
-![image-20220609151731322](Jenkins.assets/image-20220609151731322.png)
+![image-20220609151731322](./Jenkins.assets/image-20220609151731322.png)
 
 
 
@@ -474,7 +474,7 @@ ssh-keygen -t rsa
 
 在Jenkins添加一个新的凭证，类型为`SSH Username with private key`，把刚才生成私有文件内容复 制过来
 
-![image-20220609152009314](Jenkins.assets/image-20220609152009314.png)
+![image-20220609152009314](./Jenkins.assets/image-20220609152009314.png)
 
 
 
@@ -482,7 +482,7 @@ ssh-keygen -t rsa
 
 新建"test02"项目->源码管理->Git，这次要使用Gitlab的SSH连接，并且选择SSH凭证, 需要注意的是仓库url选择ssh的
 
-![image-20220609152152078](Jenkins.assets/image-20220609152152078.png)
+![image-20220609152152078](./Jenkins.assets/image-20220609152152078.png)
 
 
 
@@ -550,11 +550,11 @@ mvn -v
 
 `Jenkins`->`Global Tool Configuration(全局工具配置)`->`JDK`->`新增JDK`，配置如下：
 
-![image-20220609160512238](Jenkins.assets/image-20220609160512238.png)
+![image-20220609160512238](./Jenkins.assets/image-20220609160512238.png)
 
 `Jenkins`->`Global Tool Configuration(全局工具配置)`->`Maven`->`新增Maven`，配置如下：
 
-![image-20220609160525143](Jenkins.assets/image-20220609160525143.png)
+![image-20220609160525143](./Jenkins.assets/image-20220609160525143.png)
 
 
 
@@ -562,7 +562,7 @@ mvn -v
 
 `Manage Jenkins(系统管理)`->`Configure System(系统配置)`->`Global Properties(全局属性)` ，添加三个全局变量` JAVA_HOME`、`M2_HOME`、`PATH+EXTRA`
 
-![image-20220609160751921](Jenkins.assets/image-20220609160751921.png)
+![image-20220609160751921](./Jenkins.assets/image-20220609160751921.png)
 
 ### **配置本地仓库地址和阿里镜像**
 
@@ -597,7 +597,7 @@ vi /opt/maven/conf/settings.xml
 
 `构建`->`增加构建步骤`->`Execute Shell(执行shell)`
 
-![image-20220609161359700](Jenkins.assets/image-20220609161359700.png)
+![image-20220609161359700](./Jenkins.assets/image-20220609161359700.png)
 
 输入：
 
@@ -605,11 +605,11 @@ vi /opt/maven/conf/settings.xml
 mvn clean package
 ```
 
-![image-20220609161605703](Jenkins.assets/image-20220609161605703.png)
+![image-20220609161605703](./Jenkins.assets/image-20220609161605703.png)
 
 再次构建，如果可以把项目打包成功，代表maven环境配置成功啦！
 
-![image-20220609161717764](Jenkins.assets/image-20220609161717764.png)
+![image-20220609161717764](./Jenkins.assets/image-20220609161717764.png)
 
 ## 部署项目
 

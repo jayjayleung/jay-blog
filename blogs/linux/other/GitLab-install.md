@@ -12,7 +12,7 @@ contact: linux/other
 
 ## GitLab简介
 
-![img](GitLab-install.assets/u=4274436156,187332505&fm=253&fmt=auto&app=138&f=PNG.png)
+![img](./GitLab-install.assets/u=4274436156,187332505&fm=253&fmt=auto&app=138&f=PNG.png)
 
 官网：[https://about.gitlab.com/](https://about.gitlab.com/)
 

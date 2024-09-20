@@ -16,7 +16,7 @@ contact: linux/other
 fdisk -l
 ```
 
-![image-20220926150840615](linux-disk-install.assets/image-20220926150840615.png)
+![image-20220926150840615](./linux-disk-install.assets/image-20220926150840615.png)
   2、创建硬盘分区
 
 ```shell

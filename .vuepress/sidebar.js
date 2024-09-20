@@ -5,8 +5,10 @@ const BLOGS = '/blogs'
 const DOCS = '/docs'
 //go
 const GO_PATH='/go/'
+const OTHER='/go/'
 
 const BLOGS_GO_PATH=BLOGS+GO_PATH
+const BLOGS_OTHER=BLOGS+OTHER
 
 // console.log(createSideBarConfig2Children(GO_PATH,BLOGS))
 // console.log(createSideBarConfig("GO学习笔记",GO_PATH,BLOGS))
@@ -56,12 +58,12 @@ const sidebar = {
 	  ],
 	  '/blogs/linux/other/': [
 		  {
-			title: 'other',
+			title: 'linux-other',
 			path: '/',
 			collapsable: false, // 不折叠
 			children: [
 				{title:'GitLab代码托管服务器安装',path:'GitLab-install'},
-				{title:'centos7 挂载硬盘',path:'linux-disk-install'},
+				{title:'centos7 挂载硬盘',path:'linux-disk-install'}
 			]
 		  }
 	  ],
