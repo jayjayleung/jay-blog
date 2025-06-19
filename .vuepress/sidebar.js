@@ -1,3 +1,4 @@
+const { title } = require('./config')
 const { createSideBarConfig,createSideBarConfig2Children,delPrefixSiderBarConfig2Children } = require('./utils')
 
 
@@ -6,6 +7,7 @@ const DOCS = '/docs'
 //go
 const GO_PATH='/go/'
 const OTHER='/go/'
+const FRONTEND_PATH='/frontend/'
 
 const BLOGS_GO_PATH=BLOGS+GO_PATH
 const BLOGS_OTHER=BLOGS+OTHER
@@ -27,7 +29,7 @@ const sidebar = {
 		  {
 			title: 'docker',
 			path: '/',
-			collapsable: false, // 不折叠
+			collapsable: true, // 不折叠
 			children: [
 				{title:'docker安装(centos7)',path:'docker-install'}, 
 				{title:'docker安装mysql',path:'mysql-install'} ,
@@ -78,6 +80,15 @@ const sidebar = {
 			// 	{title:'第一个Go程序 Hello Word',path:'HelloWord'},
 			// 	{title:'Go语言的基础语法规范',path:'Go-yufaguifan'},
 			// ]
+		  }
+	  ],
+	  '/blogs/frontend/vue/': [
+		  {
+			title: 'VUE学习笔记',
+			path: '/',
+			collapsable: false, // 不折叠
+			// children: delPrefixSiderBarConfig2Children(2,FRONTEND_PATH,BLOGS)
+			children: createSideBarConfig2Children('/frontend/vue/',BLOGS)
 		  }
 	  ],
 	  

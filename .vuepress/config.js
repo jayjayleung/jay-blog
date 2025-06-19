@@ -11,7 +11,8 @@ module.exports = {
 		}
 	},
 	markdown: {
-		lineNumbers: true // 代码块显示行号
+		lineNumbers: true, // 代码块显示行号
+		extractHeaders: ['h2','h3']//右侧目录导航显示的层级,默认['h2','h3']
 	},
 	theme: 'reco',
 	themeConfig: {

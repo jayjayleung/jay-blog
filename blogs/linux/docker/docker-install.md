@@ -5,7 +5,6 @@ tags:
  - docker
 categories: 
  - linux
-contact: linux/docker
 ---
 
 ## CentOS Docker 安装
