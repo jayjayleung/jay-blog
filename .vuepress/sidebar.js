@@ -54,7 +54,7 @@ const sidebar = {
 			path: '/',
 			collapsable: false, // 不折叠
 			children: [
-				{title:'centos7安装jenkins并部署spring boot项目',path:'jenkins'}
+				{title:'centos7安装jenkins并部署spring boot项目',path:'Jenkins'}
 			]
 		  }
 	  ],
